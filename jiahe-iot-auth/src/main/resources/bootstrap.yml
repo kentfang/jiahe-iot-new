@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: jiahe-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.119.195.237:8848
+        cluster-name: ${spring.application.name}
+        namespace: jiahe_release
+      config:
+        file-extension: yml
+        server-addr: 47.119.195.237:8848
+        prefix: ${spring.application.name}
+        group: DEFAULT_GROUP
+        shared-configs: application.yml
+        namespace: jiahe_release
+        extension-configs[0].dataId: mqtt.yml
+        extension-configs[0].group: DEFAULT_GROUP
+        extension-configs[1].dataId: redis.yml
+        extension-configs[1].group: DEFAULT_GROUP
+      username: nacos
+      password: nacos
+  main:
+    allow-bean-definition-overriding: true
+
+
+management:
+  endpoint:
+    sensitive: false
+    shutdown:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: service-registry,shutdown
+

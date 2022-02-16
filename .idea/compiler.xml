@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jiahe-device-manager" />
+        <module name="jiahe-iot-auth" />
+        <module name="jiahe-iot-auth-stub" />
+        <module name="jiahe-device-manager-stub" />
+        <module name="jiahe-iot-common" />
+        <module name="jiahe-iot-user" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jiahe-device-manager" options="-parameters" />
+      <module name="jiahe-device-manager-stub" options="-parameters" />
+      <module name="jiahe-iot-auth" options="-parameters" />
+      <module name="jiahe-iot-auth-stub" options="-parameters" />
+      <module name="jiahe-iot-common" options="-parameters" />
+      <module name="jiahe-iot-new" options="-parameters" />
+      <module name="jiahe-iot-user" options="-parameters" />
+    </option>
+  </component>
+</project>
